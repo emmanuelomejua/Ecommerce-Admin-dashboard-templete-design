@@ -1,6 +1,6 @@
 import Sidebar from '../../componentes/sidebar/Sidebar'
 import Navbar from '../../componentes/navbar/Navbar'
-import Datatable from '../../componentes/datatale/Datatable'
+import Datatable from '../../componentes/datatale/datatable'
 import './list.scss'
 
 const List = () => {

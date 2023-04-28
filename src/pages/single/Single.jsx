@@ -3,6 +3,7 @@ import Sidebar from '../../componentes/sidebar/Sidebar'
 import Navbar from '../../componentes/navbar/Navbar'
 import img from '../../assets/1671696742908.jpg'
 import Chart from '../../componentes/chsrt/Chart'
+import Table from '../../componentes/table/Table'
 
 const Single = () => {
   return (
@@ -48,7 +49,10 @@ const Single = () => {
             <Chart aspect={3/1} title='User Transaction (Last 6 months)'/>
           </div>
         </section>
-        <div className="sBottom"></div>
+        <div className="sBottom">
+        <h2 className="sTitle">Information</h2>
+          <Table/>
+        </div>
       </section>
     </main>
   )

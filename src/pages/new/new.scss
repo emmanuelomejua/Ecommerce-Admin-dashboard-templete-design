@@ -1,0 +1,80 @@
+.new{
+    display: flex;
+    width: 100%;
+
+    .newContainer{
+        flex: 6;
+
+        h2{
+            color: lightgray;
+            font-size: 20px;
+        }
+
+        .nTop, .nBottom{
+            padding: 15px;
+            box-shadow:  2px 4px 10px 1px rgba(201, 201, 201, .47);
+            margin: 15px;
+            display: flex;
+
+            .nLeft{
+                flex: 1;
+                text-align: center;
+
+                img{
+                    width: 100px;
+                    width: 100px;
+                    border-radius: 50%;
+                    border: 1px solid gray;
+                    object-fit: cover;
+                   
+                }
+            }
+
+            .nRight{
+                flex: 2;
+
+                form{
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    justify-content: space-around;
+
+                    label{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .icon{
+                            cursor: pointer;
+                        }
+                    }
+
+                    .formInput{
+                        width: 40%;
+
+                        input{
+                            width: 100%;
+                            border: none;
+                            border-bottom: 1px solid gray;
+                            outline: none;
+                            padding: 5px;
+                        }
+                    }
+
+                    button{
+                        width: 150px;
+                        padding: 10px;
+                        border: none;
+                        background-color: gray;
+                        cursor: pointer;
+                        color: lightgray;
+                        font-weight: 500;
+                        font-size: large;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
