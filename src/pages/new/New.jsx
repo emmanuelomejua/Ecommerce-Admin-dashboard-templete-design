@@ -3,19 +3,23 @@ import Navbar from '../../componentes/navbar/Navbar'
 import img from '../../assets/1671696742908.jpg'
 import './new.scss'
 import { DriveFolderUploadOutlined } from '@mui/icons-material'
+import { useState } from 'react'
 
-const New = () => {
+const New = ({inputs, title}) => {
+
+  const [file, setFile] = useState('')
+
   return (
     <main className='new'>
       <Sidebar/>
       <section className='newContainer'>
         <Navbar/>
         <section className="nTop">
-          <h2>Add New User</h2>
+          <h2>{title}</h2>
         </section>
         <section className="nBottom">
           <div className="nLeft">
-            <img src={img} alt="" className="" />
+            <img src={file ? URL.createObjectURL(file) : img} alt="" className="" />
           </div>
 
           <div className="nRight">
@@ -24,44 +28,18 @@ const New = () => {
                 <label htmlFor='file'>
                  Image <DriveFolderUploadOutlined className='icon'/>
                 </label>
-                <input type='file' id='file' style={{display: 'none'}}/>
+                <input type='file' id='file' style={{display: 'none'}} onChange={(e)=>setFile(e.target.files[0])}/>
               </div>
 
-              <div className="formInput">
-                <label>Username</label>
-                <input type='text' placeholder='john_tim'/>
+            {
+              inputs.map((input) => (
+                <div className="formInput" key={input.id}>
+                  <label>{input.label}</label>
+                  <input type={input.type} placeholder={input.placeholder} min={input.min}/>
               </div>
-
-              <div className="formInput">
-                <label>FullName</label>
-                <input type='text' placeholder='John Timothy'/>
-              </div>
-
-              <div className="formInput">
-                <label>Email</label>
-                <input type='email' placeholder='johntim2k@outlook.com'/>
-              </div>
-
-              <div className="formInput">
-                <label>Phone</label>
-                <input type='number' min={1} placeholder='+234 823 12345'/>
-              </div>
-
-              <div className="formInput">
-                <label>Password</label>
-                <input type='password'/>
-              </div>
-
-              <div className="formInput">
-                <label>Address</label>
-                <input type='text' placeholder='Elton St. 234 Garden Yd. New York'/>
-              </div>
-
-              <div className="formInput">
-                <label>Country</label>
-                <input type='text'  placeholder='USA'/>
-              </div>
-
+              ))
+            }
+           
               <button>Send</button>
             </form>
           </div>
