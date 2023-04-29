@@ -1,8 +1,11 @@
 import { AccountCircleOutlined, CreditCard, Dashboard, ExitToApp, InsertChart, LocalShipping, NotificationsOutlined, PersonOutline, PsychologyOutlined, SettingsApplicationsOutlined, SettingsSystemDaydream, Store } from '@mui/icons-material'
 import './sidebar.scss'
 import {Link} from 'react-router-dom'
+import { darkModeContext } from '../../context/darkContext';
+import { useContext } from 'react'
 
 const Sidebar = () => {
+    const { dispatch } = useContext(darkModeContext)
   return (
     <main className='sidebar'>
       <div className='top'>
@@ -77,8 +80,8 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className='bottom'>
-         <div className='colorOptions'></div>
-         <div className='colorOptions'></div>
+         <div className='colorOptions' onClick={()=>dispatch({type: 'LIGHT'})}></div>
+         <div className='colorOptions' onClick={()=>dispatch({type: 'DARK'})}></div>
          <div className='colorOptions'></div>
       </div>
     </main>

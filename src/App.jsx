@@ -7,10 +7,10 @@ import New from "./pages/new/New";
 import { productInput, userInput } from "./formSrc";
 import './style/dark.scss'
 import { useContext } from "react";
-import { DarkModeContext } from "./context/darkContext";
+import { darkModeContext } from "./context/darkContext";
 
 const App = () => {
-  const {darkMode} = useContext(DarkModeContext)
+  const {darkMode} = useContext(darkModeContext)
   return (
     <main className={darkMode ? 'app dark': 'app'}>
       
@@ -23,13 +23,13 @@ const App = () => {
           </Route>
 
           <Route exact path="users">
-            <Route exact index element={<List/>}/>
+            <Route exact index element={<List title='Add New User'/>}/>
             <Route exact path=':userId' element={<Single/>}/>
             <Route exact path='new' element={<New inputs={userInput} title='Add New User'/>}/>
           </Route>
 
             <Route exact path="product">
-            <Route exact index element={<List/>}/>
+            <Route exact index element={<List title='Add New Product'/>}/>
             <Route exact path=':productId' element={<Single/>}/>
             <Route exact path='new' element={<New inputs={productInput} title='Add New Product'/>}/>
         

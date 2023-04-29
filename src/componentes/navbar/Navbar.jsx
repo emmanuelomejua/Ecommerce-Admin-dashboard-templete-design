@@ -1,8 +1,12 @@
 import { ChatBubbleOutlineOutlined, DarkModeOutlined, FullscreenExitOutlined, LanguageOutlined, ListAltOutlined, NotificationsNoneOutlined, SearchOutlined } from '@mui/icons-material'
 import './navbar.scss'
 import avater from '../../assets/1671696742908.jpg'
+import { useContext } from 'react'
+import { darkModeContext } from '../../context/darkContext'
 
-const navbar = () => {
+const Navbar = () => {
+
+  const { dispatch } = useContext(darkModeContext)
   return (
     <div className='navbar'>
         <div className='wrapper'>
@@ -18,7 +22,7 @@ const navbar = () => {
               </div>
 
               <div className='item'>
-              <DarkModeOutlined/>
+              <DarkModeOutlined onClick={()=>dispatch({type: 'TOGGLE'})}/>
               </div>
 
               <div className='item'>
@@ -48,4 +52,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
