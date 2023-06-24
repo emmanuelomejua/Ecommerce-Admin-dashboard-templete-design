@@ -1,10 +1,6 @@
-import Sidebar from '../../componentes/sidebar/Sidebar'
-import Navbar from '../../componentes/navbar/Navbar'
+import { Sidebar, Navbar, Widget, Featured, Chart, Table1} from '../../components'
 import './home.scss'
-import Widget from '../../componentes/widgets/Widget'
-import Featured from '../../componentes/feadtured/Featured'
-import Chart from '../../componentes/chsrt/Chart'
-import Table1 from '../../componentes/table/Table'
+
 
 const Home = () => {
   return (

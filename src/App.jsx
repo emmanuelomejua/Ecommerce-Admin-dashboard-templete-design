@@ -1,9 +1,6 @@
 import Login from "./pages/login/Login";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Home from "./pages/home/Home";
-import List from "./pages/list/List";
-import Single from './pages/single/Single'
-import New from "./pages/new/New";
+import { Home, List, Single, New} from "./pages";
 import { productInput, userInput } from "./formSrc";
 import './style/dark.scss'
 import { useContext } from "react";

@@ -1,6 +1,4 @@
-import Sidebar from '../../componentes/sidebar/Sidebar'
-import Navbar from '../../componentes/navbar/Navbar'
-import Datatable from '../../componentes/datatale/datatable'
+import { Sidebar, Navbar, Datatable} from '../../components'
 import './list.scss'
 
 const List = ({title}) => {

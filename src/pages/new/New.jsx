@@ -1,5 +1,4 @@
-import Sidebar from '../../componentes/sidebar/Sidebar'
-import Navbar from '../../componentes/navbar/Navbar'
+import {Sidebar, Navbar} from '../../components'
 import img from '../../assets/1671696742908.jpg'
 import './new.scss'
 import { DriveFolderUploadOutlined } from '@mui/icons-material'

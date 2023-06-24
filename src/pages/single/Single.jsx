@@ -1,9 +1,7 @@
 import './single.scss'
-import Sidebar from '../../componentes/sidebar/Sidebar'
-import Navbar from '../../componentes/navbar/Navbar'
+import {Sidebar, Navbar, Chart, Table1 } from '../../components'
 import img from '../../assets/1671696742908.jpg'
-import Chart from '../../componentes/chsrt/Chart'
-import Table from '../../componentes/table/Table'
+
 
 const Single = () => {
   return (
@@ -51,7 +49,7 @@ const Single = () => {
         </section>
         <div className="sBottom">
         <h2 className="sTitle">Information</h2>
-          <Table/>
+          <Table1/>
         </div>
       </section>
     </main>
