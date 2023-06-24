@@ -4,7 +4,7 @@ import Featured from './feadtured/Featured'
 import Navbar from './navbar/Navbar'
 import Sidebar from './sidebar/Sidebar'
 import Table1 from './table/Table'
-import Widgets from './widgets/Widget'
+import Widget from './widgets/Widget'
 
 export {
     Chart,
@@ -13,5 +13,5 @@ export {
     Navbar,
     Sidebar,
     Table1,
-    Widgets
+    Widget
 }

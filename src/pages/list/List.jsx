@@ -1,4 +1,4 @@
-import { Sidebar, Navbar, Datatable} from '../../components'
+import { Sidebar, Navbar, DataTable} from '../../components'
 import './list.scss'
 
 const List = ({title}) => {
@@ -7,7 +7,7 @@ const List = ({title}) => {
       <Sidebar/>
       <section className="listContainer">
         <Navbar/>
-        <Datatable title={title}/>
+        <DataTable title={title}/>
       </section>
     </main>
   )
